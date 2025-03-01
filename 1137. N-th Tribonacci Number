@@ -1,25 +1,25 @@
 class Solution {
 public:
-    int t[38];
-    int tribonacci1(int n) {
+    
+    int tribonacci(int n) {
         if(n==0){
             return 0;
         }
-        else if(n==1){
+        else if(n==1 || n==2){
             return 1;
         }
-        else if(n==2){
-            return 1;
-        }
-        if(t[n] != -1){
-            return t[n];
-        }
-
-        return t[n]=tribonacci1(n-1)+tribonacci1(n-2)+tribonacci1(n-3);
+        int a=0;
+        int b=1;
+        int c=1;
+        int d=a+b+c;
+        for(int i=3;i<=n;i++){
+            d=a+b+c;
+            a=b;
+            b=c;
+            c=d;
+        }  
+        return d;
         
     }
-    int tribonacci(int n){
-        memset(t,-1,sizeof(t));
-        return tribonacci1(n);
-    }
+    
 };
