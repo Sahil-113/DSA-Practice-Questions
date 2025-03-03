@@ -12,7 +12,7 @@ Welcome to the DSA Practice Questions with Solutions repository! This repository
 
 🎯 Difficulty Levels: Problems categorized into Easy, Medium, and Hard.
 
-🌍 Language Support: Solutions provided in Python, C++, and Java.
+🌍 Language Support: Solutions provided in C++ and Python.
 
 ## 📂 Folder Structure
 
@@ -82,4 +82,4 @@ This project is licensed under the MIT License – feel free to use, modify, and
 
 If you find this helpful, ⭐ star this repository to keep it growing!
 
-Happy Coding! 🚀
+### Happy Coding! 🚀
