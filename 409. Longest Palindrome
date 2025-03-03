@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int longestPalindrome(string s) {
+        map<char,int>mp;
+        int n=s.size();
+        int oddch=0;
+        for(char ch:s){
+            mp[ch]++;
+            if(mp[ch] %2 !=0){
+                oddch++;
+            }
+            else{
+                oddch--;
+            
+            }
+        }
+        if(oddch==0){
+            return (n-oddch);
+        }
+        return (n-oddch)+1;
+    }
+};
