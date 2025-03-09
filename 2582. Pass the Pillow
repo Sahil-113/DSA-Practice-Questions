@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int passThePillow(int n, int time) {
+        int lefttime=time%(n-1);
+        int full =time/(n-1);
+        if(full %2==0){
+            return lefttime+1;
+        }
+        else{
+            return n-lefttime;
+        }
+        return -1;
+
+    }
+};
