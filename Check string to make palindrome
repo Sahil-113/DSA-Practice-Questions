@@ -1,0 +1,38 @@
+Given a string S, check if character of the given string
+can be rearranged to form a palindrome.
+input : geeksogeeks
+Output : Yes
+input : rarmae
+output : No
+
+Code : -
+
+#include <iostream>
+#include<unordered_map>
+using namespace std;
+
+int main()
+{
+    unordered_map<char,int>mp;
+    string str;
+    cin>>str;
+    long n=str.size();
+    long count=0;
+    for(char ch:str){
+        mp[ch]++;
+    }
+    for(auto it : mp){
+        if(it.second%2 !=0){
+            count++;
+        }
+        
+    }
+    if(count<=1){
+        cout<<"Yes"<<endl;
+    }
+    else{
+        cout<<"No"<<endl;
+    }
+
+    return 0;
+}
