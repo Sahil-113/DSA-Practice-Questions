@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+class A{
+  public:
+  void show(){
+      cout<<"This is called HAS-A Relationship."<<endl;
+  }
+};
+class B
+{
+    public:
+    void fun(){
+        A obj;
+        obj.show();
+    }
+    
+};
+
+int main()
+{
+    B obj;
+    obj.fun();
+    return 0;
+}
