@@ -1,0 +1,27 @@
+// Find missing element in array
+
+#include <iostream>
+#include<vector>
+using namespace std;
+long missing(vector<long>arr){
+    long N=arr.size();
+    long result,sum=0;
+    for(long num : arr){
+        sum+=num;
+    }
+    long Total_sum=N*(N+1)/2;
+    return Total_sum-sum;
+}
+
+int main()
+{
+    long N;
+    cin>>N;
+    vector<long>arr(N);
+    for(long i=0;i<N-1;i++){
+        cin>>arr[i];
+    }
+    cout<<missing(arr)<<endl;
+
+    return 0;
+}
