@@ -1,0 +1,31 @@
+// Implement Binary Search algorithm
+
+#include <iostream>
+#include<vector>
+using namespace std;
+
+long search(vector<long>arr,long target){
+    long n=arr.size();
+    long start=0;
+    long end=n-1;
+    while(start<end){
+        long mid=start+(end-start)/2;
+        if(target==arr[mid]) return mid;
+        else if(target>mid) start=mid+1;
+        else end=mid-1;
+    }
+    return -1;
+}
+
+int main()
+{
+    long N,target;
+    cin>>N>>target;
+    vector<long>arr(N);
+    for(long i=0;i<N;i++){
+        cin>>arr[i];
+    }
+    cout<<"target is found at index : "<<search(arr,target)<<endl;
+
+    return 0;
+}
