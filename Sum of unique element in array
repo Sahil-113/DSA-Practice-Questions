@@ -1,0 +1,29 @@
+// sum of unique element in an array
+#include <iostream>
+#include<vector>
+#include<set>
+using namespace std;
+
+long uniqSum(vector<long>arr){
+    long n=arr.size();
+    set<long>newarr(arr.begin(),arr.end());
+    long sum=0;
+    for(long num:newarr){
+        sum+=num;
+    }
+    return sum;
+}
+
+int main()
+{
+    long n;
+    cin>>n;
+    vector<long>arr(n);
+    for(long i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    cout<<"sum is : "<<uniqSum(arr)<<endl;
+    
+
+    return 0;
+}
