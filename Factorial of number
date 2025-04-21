@@ -1,0 +1,19 @@
+// find factorial of number
+#include <iostream>
+using namespace std;
+unsigned long fact(unsigned long num){
+    unsigned long fact=1;
+    for(unsigned long i=1;i<=num;i++){
+        fact *=i;
+    }
+    return fact;
+}
+
+int main()
+{
+    unsigned long num;
+    cin>>num;
+    cout<<"Factorial : "<<fact(num)<<endl;
+
+    return 0;
+}
