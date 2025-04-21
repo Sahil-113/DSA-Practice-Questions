@@ -1,0 +1,26 @@
+//Print fibonacci series for given range
+#include <iostream>
+#include<vector>
+using namespace std;
+
+void fib(long num){
+    vector<long>arr(num+1);
+    arr[0]=0;
+    arr[1]=1;
+    cout<<arr[0]<<" "<<arr[1]<<" ";
+    for(long i=2;i<num;i++){
+        arr[i]=arr[i-1]+arr[i-2];
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
+
+int main()
+{
+    long num;
+    cin>>num;
+    cout<<"Fibonacci Series : ";
+    fib(num);
+
+    return 0;
+}
