@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool isRot(string s1,string s2) {
+    if (s1.length() != s2.length())
+        return false;
+    string result = s1 + s1;
+    return result.find(s2)!=string::npos ;
+}
+
+int main() {
+    string str1,str2;
+    getline(cin,str1);
+    getline(cin,str2);
+
+    if (isRot(str1, str2))
+        cout << "Yes" << endl;
+    else
+        cout << "No" << endl;
+
+    return 0;
+}
