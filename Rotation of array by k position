@@ -1,0 +1,29 @@
+// Rotation of array by k position
+
+#include <iostream>
+#include<vector>
+#include <algorithm>
+using namespace std;
+void rotation(vector<long>& arr,long k){
+    long n=arr.size();
+    k=k%n;
+    reverse(arr.begin(),arr.end());
+    reverse(arr.begin(),arr.begin()+k);
+    reverse(arr.begin()+k,arr.end());
+}
+
+int main()
+{
+    long k,n;
+    cin>>k>>n;
+    vector<long>arr(n);
+    for(long i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    rotation(arr,k);
+    for(long i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }   
+
+    return 0;
+}
