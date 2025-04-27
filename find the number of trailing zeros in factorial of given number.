@@ -1,0 +1,22 @@
+
+#include <iostream>
+#include<map>
+using namespace std;
+long zeros(long n){
+    long sum=0;
+    while(n>5){
+        sum+=n/5;
+        n=n/5;
+    }
+    return sum;
+}
+
+
+int main()
+{
+    long n;
+    cin>>n;
+    cout<<zeros(n)<<endl;
+    
+    return 0;
+}
