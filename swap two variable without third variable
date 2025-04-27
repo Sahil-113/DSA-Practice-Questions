@@ -1,0 +1,20 @@
+
+#include <iostream>
+using namespace std;
+void Swap(long &a,long &b){
+    a=a^b;
+    b=a^b;
+    a=a^b;
+}
+
+int main()
+{
+    long a,b;
+    cout<<" Enter A : ";
+    cin>>a;
+    cout<<" Enter B : ";
+    cin>>b;
+    Swap(a,b);
+    cout<<" A : "<<a<<endl<<" B : "<<b<<endl;
+    return 0;
+}
