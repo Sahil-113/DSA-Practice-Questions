@@ -1,0 +1,23 @@
+
+
+#include <iostream>
+using namespace std;
+int SetBit(int n){
+    int c=0;
+    while(n>0){
+        c+= n &  1;
+        n=n>>1;
+    }
+    return c;
+    
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter N : ";
+    cin>>n;
+    cout<<"No. of Set bit : "<<SetBit(n)<<endl;
+
+    return 0;
+}
