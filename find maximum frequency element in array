@@ -1,0 +1,34 @@
+
+
+#include <iostream>
+#include<vector>
+#include<map>
+using namespace std;
+
+long maxfreq(vector<long>arr){
+    long n=arr.size();
+    long max=0;
+    long max1=-1;
+    map<long,long>mp;
+    for(long l:arr){
+        mp[l]++;
+        if(mp[l]>max){
+            max=mp[l];
+            max1=l;
+        }
+    }
+    return max1;
+}
+
+int main()
+{
+    long n;
+    cin>>n;
+    vector<long>arr(n);
+    for(long i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    cout<<maxfreq(arr)<<endl;
+
+    return 0;
+}
