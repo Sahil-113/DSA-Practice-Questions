@@ -1,0 +1,26 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+long SumDiff(vector<long>arr){
+    long n=arr.size();
+    sort(arr.begin(),arr.end());
+    long sum=0;
+    for(long i=1;i<n;i++){
+        sum+=(arr[i]-arr[i-1]);
+    }
+    return sum;
+}
+
+int main()
+{
+    long n;
+    cin>>n;
+    vector<long>arr(n);
+    for(long i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    cout<<SumDiff(arr)<<endl;  
+    
+
+    return 0;
+}
