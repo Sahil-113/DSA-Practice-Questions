@@ -1,0 +1,30 @@
+
+// Remove duplicate from array
+#include <bits/stdc++.h>
+using namespace std;
+vector<long>RemoveDuplicate(vector<long>arr) {
+	vector<long>result;
+	for(long num:arr) {
+		if(find(result.begin(),result.end(),num) == result.end()) {
+			result.push_back(num);
+		}
+	}
+	return result;
+
+}
+int main()
+{
+	long num;
+	cin>>num;
+	vector<long>arr(num);
+	for(long i=0; i<num; i++) {
+		cin>>arr[i];
+	}
+	vector<long>result=RemoveDuplicate(arr);
+	for(long num:result){
+	    cout<<num<<" ";
+	}
+
+
+	return 0;
+}
