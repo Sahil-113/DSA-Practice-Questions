@@ -1,0 +1,28 @@
+//find all pair with a given sum in array
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void pairsum(vector<long>arr,long sum){
+    unordered_set<long>set;
+    for(long num:arr){
+        long opp=sum-num;
+        if(set.find(opp) != set.end()){
+            cout<<"("<<num<<","<<opp<<")"<<endl;
+        }
+        set.insert(num);
+    }
+}
+int main()
+{
+    long num,targetsum;
+    cin>>num>>targetsum;
+    vector<long>arr(num);
+    for(long i=0;i<num;i++){
+        cin>>arr[i];
+    }
+    pairsum(arr,targetsum);
+    
+
+    return 0;
+}
