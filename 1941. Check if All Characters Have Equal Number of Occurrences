@@ -1,0 +1,17 @@
+class Solution {
+public:
+    bool areOccurrencesEqual(string s) {
+        map<char,int>mp;
+        int n=s.length();
+        for(char ch:s){
+            mp[ch]++;
+        }int max=mp[s[0]];
+        for(auto it:mp){
+            if(it.second!=max){
+                return false;
+            }
+        }
+        return true;
+        
+    }
+};
