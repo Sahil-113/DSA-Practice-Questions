@@ -1,0 +1,20 @@
+class Solution {
+  public:
+    Node *insertInMiddle(Node *head, int x) {
+        // Code Here
+        Node *newnode=new Node(x);
+        if (head == NULL) {
+        return newnode;
+    }
+        Node *slow=head;
+        Node *fast=head;
+        while(fast->next!=NULL && fast->next->next!=NULL){
+            slow=slow->next;
+            fast=fast->next->next;
+        }
+        newnode->next=slow->next;
+        slow->next=newnode;
+        return head;
+        
+    }
+};
