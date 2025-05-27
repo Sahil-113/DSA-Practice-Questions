@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int int_to_bin(int n){
+        string s="";
+        while(n){
+            int x=n&1;
+            x=(x==1)?0:1;
+            s=to_string(x)+s;
+            n>>=1;
+        }
+        return stoi(s,nullptr,2);
+    }
+    int bitwiseComplement(int n) {
+        if(n==0){
+            return 1;
+        }
+        return int_to_bin(n);
+        
+    }
+};
